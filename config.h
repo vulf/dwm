@@ -23,11 +23,13 @@ static const char *colors[][4]      = {
 	[SchemeSel] =  { col_fg, col_bar,  col_gray2, col_cyan },
 };
 /* Custom */
+/*
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 static const char *upbrightness[] = { "/usr/bin/xbacklight", "+", "5%", NULL };
 static const char *downbrightness[] = { "/usr/bin/xbacklight", "-", "5%", NULL };
+*/
 
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -102,11 +104,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
-	{ 0,                       XF86XK_MonBrightnessUp, spawn, {.v = upbrightness } },
-	{ 0,                       XF86XK_MonBrightnessDown, spawn, {.v = downbrightness } },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume 0 -5%") },
+	{ 0,                            XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute 0 toggle") },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume 0 +5%") },
+	{ 0,                            XF86XK_MonBrightnessUp, spawn, SHCMD("xbacklight +5%") },
+	{ 0,                            XF86XK_MonBrightnessDown, spawn, SHCMD("xbacklight -5%") },
 	
 	
 	TAGKEYS(                        XK_1,                      0)
