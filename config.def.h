@@ -13,6 +13,8 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#005577"; // default dwm blue
 static const char col_cyan[]        = "#439DB6"; // light blue
+static const unsigned int baralpha = 50;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan, col_gray4 },
@@ -25,6 +27,11 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 static const char *upbrightness[] = { "/usr/bin/xbacklight", "+", "5%", NULL };
 static const char *downbrightness[] = { "/usr/bin/xbacklight", "-", "5%", NULL };
 
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
