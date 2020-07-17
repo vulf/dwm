@@ -9,20 +9,20 @@ static const char *fonts[]          = { "Hack:size=10",
                                         "FontAwesome:Regular:size=10"
 };
 static const char dmenufont[]       = "Hack:size=10";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#F3F6F9"; // white
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       = "#10131a";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#005577"; // default dwm blue
 static const char col_fg[]          = "#99e7ff";
 static const char col_bar[]         = "#1b272c";
 static const char col_cyan[]        = "#439DB6"; // light blue
-static const unsigned int baralpha  = 50;
+static const unsigned int baralpha  = 150;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
-	[SchemeNorm] = { col_cyan, col_bar, col_cyan, col_gray4 },
-	[SchemeSel] =  { col_fg, col_bar,  col_gray2, col_cyan },
+	[SchemeNorm] = { col_cyan, col_gray3, col_cyan, col_gray4 },
+	[SchemeSel] =  { col_fg, col_gray3,  col_gray2, col_cyan },
 };
 /* Custom */
 /*
@@ -94,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ 0,                            XK_Print,  spawn,          SHCMD("scrot") },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
@@ -108,9 +109,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume 0 -5%") },
-	{ 0,                            XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute 0 toggle") },
-	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume 0 +5%") },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume 0 -5%; pkill -RTMIN+10 dwmblocks") },
+	{ 0,                            XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute 0 toggle; pkill -RTMIN+10 dwmblocks") },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume 0 +5%; pkill -RTMIN+10 dwmblocks") },
 	{ 0,                            XF86XK_MonBrightnessUp, spawn, SHCMD("xbacklight +5%") },
 	{ 0,                            XF86XK_MonBrightnessDown, spawn, SHCMD("xbacklight -5%") },
 	
