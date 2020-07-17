@@ -9,20 +9,21 @@ static const char *fonts[]          = { "Hack:size=10",
                                         "FontAwesome:Regular:size=10"
 };
 static const char dmenufont[]       = "Hack:size=10";
-static const char col_gray1[]       = "#000000";
+static const char col_gray0[]       = "#000000";
+static const char col_gray1[]       = "#ffffff";
 static const char col_gray2[]       = "#F3F6F9"; // white
-static const char col_gray3[]       = "#10131a";
+static const char col_gray3[]       = "#739990";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#005577"; // default dwm blue
 static const char col_fg[]          = "#99e7ff";
 static const char col_bar[]         = "#1b272c";
 static const char col_cyan[]        = "#439DB6"; // light blue
-static const unsigned int baralpha  = 150;
+static const unsigned int baralpha  = 0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
-	[SchemeNorm] = { col_cyan, col_gray3, col_cyan, col_gray4 },
-	[SchemeSel] =  { col_fg, col_gray3,  col_gray2, col_cyan },
+	[SchemeNorm] = { col_gray3, col_gray0, col_cyan, col_gray4 },
+	[SchemeSel] =  { col_gray1, col_gray0,  col_gray2, col_cyan },
 };
 /* Custom */
 /*
