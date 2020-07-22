@@ -42,7 +42,7 @@ static const unsigned int alphas[][3]      = {
 
 /* tagging */
 // static const char *tags[] = { "", "", "", "", "", "6", "7", "8", "9" };
-static const char *tags[] = { "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -53,6 +53,12 @@ static const Rule rules[] = {
 	{ "burp-StartBurp", NULL,   NULL,        1 << 1,            1,           -1 },
 	{ "st-256color",   NULL,    NULL,       1 << 2,       0,           -1 },
 	{ "firefox",     NULL,      NULL,       1,            0,           -1 },
+	{ "Chromium",     NULL,      NULL,       1,            0,           -1 },
+	{ "VirtualBox Manager", NULL,      NULL,  1 << 3,            0,           -1 },
+	{ "VirtualBox Machine", NULL,      NULL,  1 << 3,            0,           -1 },
+	{ "Cherrytree",     NULL,      NULL,       1 << 4,            0,           -1 },
+	{ "discord",     NULL,      NULL,           1 << 5,                    0,           -1 },
+	{ "SimpleScreenRecorder",  NULL,   NULL,       1 << 6,            0,           -1 }
 };
 
 /* layout(s) */
