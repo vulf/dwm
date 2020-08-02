@@ -115,6 +115,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("cd /home/pranav/Downloads/burp/bsp/ && java -Xbootclasspath/p:Loader.jar -jar burpsuite_pro_v1.7.35.jar") },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume 0 -5%; pkill -RTMIN+10 dwmblocks") },
 	{ 0,                            XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute 0 toggle; pkill -RTMIN+10 dwmblocks") },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume 0 +5%; pkill -RTMIN+10 dwmblocks") },
