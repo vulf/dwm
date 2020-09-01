@@ -60,6 +60,7 @@ static const Rule rules[] = {
 	{ "Evince",     NULL,      NULL,           1 << 4,                    0,           -1 },
 	{ "discord",     NULL,      NULL,           1 << 5,                    0,           -1 },
 	{ "SimpleScreenRecorder",  NULL,   NULL,       1 << 6,            0,           -1 },
+	{ "st-256color",   NULL,    "ranger",       1 << 7,       0,           -1 },
 	{ "Thunar",  NULL,   NULL,       1 << 7,            0,           -1 }
 };
 
@@ -89,6 +90,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray0, "-nf", col_gray3, "-sb", col_gray5, "-sf", col_gray3, NULL };
+static const char *schot[] = {"/home/pranav/bin/schot", NULL};
+static const char *schot_sel[] = {"/home/pranav/bin/schot", "-s", NULL};
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
@@ -102,7 +105,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ 0,                            XK_Print,  spawn,          SHCMD("scrot") },
+	{ MODKEY,                       XK_Print,  spawn,          {.v = schot } },
+	{ 0,                            XK_Print,  spawn,          {.v = schot_sel } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
