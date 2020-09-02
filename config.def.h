@@ -60,7 +60,6 @@ static const Rule rules[] = {
 	{ "Evince",     NULL,      NULL,           1 << 4,                    0,           -1 },
 	{ "discord",     NULL,      NULL,           1 << 5,                    0,           -1 },
 	{ "SimpleScreenRecorder",  NULL,   NULL,       1 << 6,            0,           -1 },
-	{ "st-256color",   NULL,    "ranger",       1 << 7,       0,           -1 },
 	{ "Thunar",  NULL,   NULL,       1 << 7,            0,           -1 }
 };
 
