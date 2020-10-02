@@ -9,9 +9,9 @@ static const char *fonts[]          = { "Fira Mono:Medium:size=10",
                                         "FontAwesome:Regular:size=11"
 };
 static const char dmenufont[]       = "Fira Mono:Medium:size=10";
-static const char col_gray0[]       = "#4FEA9F"; // minty green
+static const char col_gray0[]       = "#398f00"; // minty green
 static const char col_gray1[]       = "#ffffff";
-static const char col_grey[]        = "#8c8c8c"; // grey
+static const char col_grey[]        = "#2b2b2b"; // grey
 static const char col_black[]       = "#000000"; // black
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#FFC0CB"; // pink
