@@ -11,19 +11,19 @@ static const char *fonts[]          = { "Fira Mono:Medium:size=10",
 static const char dmenufont[]       = "Fira Mono:Medium:size=10";
 static const char col_gray0[]       = "#4FEA9F"; // minty green
 static const char col_gray1[]       = "#ffffff";
-static const char col_gray2[]       = "#F3F6F9"; // white
-static const char col_gray3[]       = "#000000"; // black
+static const char col_grey[]        = "#8c8c8c"; // grey
+static const char col_black[]       = "#000000"; // black
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#FFC0CB"; // pink
 static const char col_fg[]          = "#99e7ff";
 static const char col_bar[]         = "#1b272c";
-static const char col_cyan[]        = "#44DEF7"; // light blue
+static const char col_white[]       = "#FFFFFF"; // white
 static const unsigned int baralpha  = OPAQUE;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
-	[SchemeNorm] = { col_gray3, col_gray0, col_gray5, col_gray4 },
-	[SchemeSel] =  { col_gray3, col_gray5,  col_gray2, col_gray5 },
+	[SchemeNorm] = { col_black, col_white, col_gray5, col_gray4 },
+	[SchemeSel] =  { col_white, col_grey,  col_grey, col_gray5 },
 };
 /* Custom */
 /*
@@ -88,7 +88,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray0, "-nf", col_gray3, "-sb", col_gray5, "-sf", col_gray3, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray0, "-nf", col_black, "-sb", col_gray5, "-sf", col_black, NULL };
 static const char *schot[] = {"/home/pranav/bin/schot", NULL};
 static const char *schot_sel[] = {"/home/pranav/bin/schot", "-s", NULL};
 static const char *termcmd[]  = { "st", NULL };
