@@ -104,6 +104,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_x,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = schot } },
 	{ 0,                            XK_Print,  spawn,          {.v = schot_sel } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
