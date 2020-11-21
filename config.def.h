@@ -9,11 +9,11 @@ static const char *fonts[]          = { "Fira Mono:Medium:size=10",
                                         "FontAwesome:Regular:size=11"
 };
 static const char dmenufont[]       = "Fira Mono:Medium:size=10";
-static const char col_gray0[]       = "#398f00"; // minty green
-static const char col_gray1[]       = "#ffffff";
+static const char col_mint[]        = "#398f00"; // minty green
+static const char col_pink[]        = "#ED98A5";
 static const char col_gray[]        = "#2b2b2b"; // gray
 static const char col_black[]       = "#000000"; // black
-static const char col_gray4[]       = "#eeeeee";
+static const char col_green[]       = "#396D3D";
 static const char col_gray5[]       = "#FFC0CB"; // pink
 static const char col_fg[]          = "#99e7ff";
 static const char col_bar[]         = "#1b272c";
@@ -22,8 +22,8 @@ static const unsigned int baralpha  = OPAQUE;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
-	[SchemeNorm] = { col_black, col_white, col_gray, col_gray },
-	[SchemeSel] =  { col_white, col_gray,  col_white, col_white },
+	[SchemeNorm] = { col_black, col_white, col_black, col_gray },
+	[SchemeSel] =  { col_white, col_gray,  col_black, col_white },
 };
 /* Custom */
 /*
