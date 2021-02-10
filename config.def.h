@@ -11,7 +11,7 @@ static const char *fonts[]          = { "Fira Mono:Medium:size=10",
 static const char dmenufont[]       = "Fira Mono:Medium:size=10";
 static const char col_mint[]        = "#398f00"; // minty green
 static const char col_pink[]        = "#ED98A5";
-static const char col_gray[]        = "#2b2b2b"; // gray
+static const char col_gray[]        = "#2B2B2B"; // gray
 static const char col_black[]       = "#000000"; // black
 static const char col_green[]       = "#396D3D";
 static const char col_gray5[]       = "#FFC0CB"; // pink
@@ -22,7 +22,7 @@ static const unsigned int baralpha  = OPAQUE;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
-	[SchemeNorm] = { col_black, col_white, col_black, col_gray },
+	[SchemeNorm] = { col_white, col_black, col_black, col_gray },
 	[SchemeSel] =  { col_white, col_gray,  col_black, col_white },
 };
 /* Custom */
@@ -88,7 +88,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_white, "-nf", col_black, "-sb", col_gray, "-sf", col_white, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_white, "-sb", col_gray, "-sf", col_white, NULL };
 static const char *schot[] = {"/home/pranav/bin/schot", NULL};
 static const char *schot_sel[] = {"/home/pranav/bin/schot", "-s", NULL};
 static const char *termcmd[]  = { "st", NULL };
@@ -112,6 +112,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
